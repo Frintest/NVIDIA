@@ -34,6 +34,18 @@ module.exports = {
 	},
 	module: {
 		rules: [
+			// * ----- js -----
+			{
+				test: /\.(js)$/,
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: ['@babel/preset-react']
+					}
+				},
+				exclude: '/node_modules/',
+			},
+
 			// * ----- css -----
 			{
 				test: /\.(css)$/i,
