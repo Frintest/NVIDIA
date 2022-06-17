@@ -1,9 +1,9 @@
 {
   "name": "nvidia",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "React 3D проект на babylon.js",
   "private": true,
-  "keywords": ["frontend", "react", "babylon", "nvidia", "3d"],
+  "keywords": ["frontend", "react", "babylonjs", "nvidia", "3d"],
   "author": "<dimaruzaev2@gmail.com>",
   "license": "ISC",
   "repository": {

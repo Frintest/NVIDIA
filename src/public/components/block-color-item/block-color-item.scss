@@ -1,0 +1,13 @@
+.block-color {
+	&__item {
+		&:not(:first-child) {
+			margin: 0 0 0 10px;
+		}
+	}
+
+	&__btn {
+		width: 35px;
+		height: 35px;
+		display: block;
+	}
+}
