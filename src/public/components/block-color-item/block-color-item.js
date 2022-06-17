@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 
 import './block-color-item.scss';
 
@@ -18,17 +19,27 @@ class BlockColorItem extends Component {
 		const { colorItem } = this.props;
 		const { value } = this.state;
 
+		const CustomRadio = styled.span`
+			border-color: ${colorItem};
+
+			&::before {
+				background: ${colorItem};
+			}
+		`;
+
 		return (
-			<div className="block-color__item">
+			<label className="block-color__item">
 				<input
 					type="radio"
-					className="block-color__btn"
+					className="block-color__real-radio"
 					value={colorItem}
 					name="radio-color-backlight"
 					onChange={(e) => this.checkColorItem(e)}
 					defaultChecked={value === colorItem}
 				/>
-			</div>
+
+				<CustomRadio className="block-color__custom-radio"></CustomRadio>
+			</label>
 		)
 	}
 }

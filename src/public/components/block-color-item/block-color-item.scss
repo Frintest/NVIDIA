@@ -5,9 +5,38 @@
 		}
 	}
 
-	&__btn {
+	&__real-radio {
+		width: 0;
+		height: 0;
+		position: absolute;
+		opacity: 0;
+		z-index: -1;
+	}
+
+	&__custom-radio {
+		display: block;
 		width: 35px;
 		height: 35px;
-		display: block;
+		position: relative;
+		border-style: solid;
+		border-width: 2px;
+		border-radius: 100px;
+		cursor: pointer;
+
+		&::before {
+			content: '';
+			width: 20px;
+			height: 20px;
+			border-radius: 100px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) scale(0);
+			transition: .2s ease-in;
+		}
+	}
+
+	&__real-radio:checked+&__custom-radio::before {
+		transform: translate(-50%, -50%) scale(1);
 	}
 }
